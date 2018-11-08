@@ -1,0 +1,19 @@
+<h1>formulaire choisir film</h1>
+<!--<div class="row"> PAS RÉUSSIE A FAIRE FONCTIONNER A TRAVAILLER +++
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:user, url: show_path) do |f| %>
+
+      <%= f.label :film %>
+      <%= f.text_field :film,  placeholder: 'film', class: "form-control" %>
+
+      <%= f.submit "rechercher", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>--> 
+<form action="/show" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="form-group">
+          <input type="text" class="form-control" name="movie_name" placeholder="Nom du film">
+        </div>
+        <button type="submit" class="btn btn-primary">Chercher</button>
+</form>
